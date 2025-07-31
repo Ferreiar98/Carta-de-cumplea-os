@@ -24,7 +24,12 @@ body {
   text-shadow: 0 0 10px #ff69b4;
 }
 
-.ojitos {
-  width: 100px;
-  margin-top: 20px;
+.Carta {
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.Carta:hover {
+  transform: scale(1.05);
 }
