@@ -1,50 +1,52 @@
-body {
+body, html {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fff0f5;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
 }
 
 .main-container {
   position: relative;
-  text-align: center;
-  padding: 20px;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .main-image {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .text-overlay {
   position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -30%);
-  color: #333;
-  text-shadow: 1px 1px 2px #fff;
-  max-width: 90%;
+  top: 10%;
+  left: 5%;
+  right: 5%;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4); /* fondo semitransparente opcional */
+  padding: 1em;
+  border-radius: 10px;
+  font-size: 4vw; /* RESPONSIVO */
 }
 
-.titulo-cumple {
-  font-family: 'Pacifico', cursive;
-  font-size: 48px;
-  color: #d81b60;
-  margin-bottom: 10px;
+.text-overlay h1 {
+  font-size: 6vw; /* cambia con tamaño de pantalla */
+  margin: 0.5em 0;
 }
 
-p {
-  font-size: 18px;
-  color: #444;
+.text-overlay p {
+  font-size: 4vw;
+  margin: 0;
 }
 
 .Carta {
-  margin-top: 40px;
-  width: 150px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  margin: 2em auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 }
 
-.Carta:hover {
-  transform: scale(1.05);
-}
 
