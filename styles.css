@@ -1,105 +1,59 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-body, html {
+body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
-    font-family: sans-serif;
-    overflow: hidden;
-}
-
-.pantalla-completa {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    display: block;
-}
-
-#inicio, #intermedio, #carta {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-}
-
-.oculto {
-    display: none;
-}
-
-.btn-inicio {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 15px 30px;
-    background-color: #ff69b4;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.imagen-boton {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.imagen-boton img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(4px);
-    transform: scale(1.05);
-}
-
-.texto-boton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 24px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px 30px;
-    border-radius: 12px;
-}
-
-.mensaje {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    right: 10%;
-    bottom: 10%;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 40px;
-    overflow-y: auto;
-    border-radius: 20px;
-}
-
-.titulo {
     font-family: 'Pacifico', cursive;
-    font-size: 32px;
-    color: #ff1493;
+    background-color: #fff0f5;
 }
 
-.contenido {
-    font-size: 20px;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main-image {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.click-image {
+    margin-top: 30px;
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.click-image:hover {
+    transform: scale(1.1);
+}
+
+.carta-body {
+    background: url('images/Ana3.jpg') no-repeat center center/cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carta-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+}
+
+.carta-text p {
+    margin: 15px 0;
+    font-size: 1.4rem;
     color: #333;
-}
-
-#confetti-container, #corazones-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-    z-index: 1000;
 }
