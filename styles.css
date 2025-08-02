@@ -40,14 +40,17 @@ body, html {
   margin: 0;
 }
 
-.Carta {
-  display: block;
-  width: 100%;
-  max-width: 400px;
-  margin: 2em auto;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-}
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .text-overlay {
+    padding: 15px;
+  }
 
+  .text-overlay h1.pacifico-title {
+    font-size: 1.5em;
+  }
+
+  .text-overlay p {
+    font-size: 0.95em;
   }
 }
