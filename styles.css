@@ -1,59 +1,63 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Pacifico', cursive;
-    background-color: #fff0f5;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fffafc;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+.cover-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.cover-text {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .main-image {
-    width: 90%;
-    max-width: 500px;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  max-width: 100%;
+  height: auto;
 }
 
-.click-image {
-    margin-top: 30px;
-    width: 150px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+.text-overlay {
+  margin-top: 20px;
+  max-width: 800px;
+  padding: 20px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+  background-color: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.click-image:hover {
-    transform: scale(1.1);
-}
-
-.carta-body {
-    background: url('images/Ana3.jpg') no-repeat center center/cover;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carta-container {
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 600px;
-    width: 90%;
-    text-align: center;
-}
-
-.carta-text p {
-    margin: 15px 0;
-    font-size: 1.4rem;
-    color: #333;
+/* Ocultar contenido hasta el clic */
+.hidden {
+  display: none;
 }
