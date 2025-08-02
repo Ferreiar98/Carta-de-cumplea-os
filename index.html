@@ -1,22 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Feliz Cumpleaños Ana Vicente</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feliz cumpleaños Ana Vicente</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="main-container">
-    <img src="Ana1.jpg" alt="Imagen de fondo" class="main-image" />
-    <div class="text-overlay">
-      <h1 class="titulo-cumple">Feliz cumpleaños Ana Vicente</h1>
-      <p>Deseo dedicarte unas palabras a través de esta página web, acompañadas de una pequeña carta elaborada especialmente para ti.</p>
-    </div>
-    <a href="carta.html">
-      <img src="Ana2.jpg" alt="Click aquí" class="Carta" />
-    </a>
-  </div>
+    <section id="inicio">
+        <img src="Ana1.jpg" alt="Portada Ana" class="pantalla-completa" />
+        <div id="confetti-container"></div>
+        <button onclick="irCarta()" class="btn-inicio">Ver Siguiente</button>
+    </section>
+
+    <section id="intermedio" class="oculto">
+        <div class="imagen-boton" onclick="mostrarCarta()">
+            <img src="Ana2.jpg" alt="Click Ana" class="desenfocada" />
+            <div class="texto-boton">Haz click para ver tu carta</div>
+        </div>
+    </section>
+
+    <section id="carta" class="oculto">
+        <img src="Ana3.jpg" alt="Carta Ana" class="pantalla-completa" />
+        <div class="mensaje">
+            <h1 class="titulo">Feliz cumpleaños Ana Vicente</h1>
+            <p class="contenido">
+                Hoy celebro la existencia de alguien muy especial...<br><br>
+                Gracias por ser tú. Que este nuevo ciclo te llene de luz, amor y momentos inolvidables.<br><br>
+                Con todo mi cariño,<br>
+                Fernanda.
+            </p>
+        </div>
+        <div id="corazones-container"></div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
